@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pratique1</title>
+    <!-- Link to Bootstrap's CSS file -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container my-4">
+        <h1 class="mt-4">CET EXEMPLE</h1>
+        <ul>
+            <li>Cree un objet</li>
+            <li>Ensuite afficher les propriétés d'un objet en utilisant une fonction getProperties et un objet address</li>
+            <li>Ensuite afficher les propriétés d'un objet en utilisant une méthode qui est dans l'objet</li>
+        </ul>
+        <button class="btn btn-primary" value="afficher propriétés d'un objet en utilisant une méthode" onclick="afficherProprietesObjet()">Afficher propriétés d'un objet en utilisant une méthode</button>
+        <br><br><br><br>
+        <button id="cacherBtn" class="btn btn-info" onclick="cacherResultat()" style="display: none;">Cacher</button>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <h2>Résultat :</h2>
+            </div>
+            <div class="col text-right">
+            </div>
+        </div>
+        <p id="affichage"></p> <!-- create a new element to hold the output -->
+    </div>
+
+    <script>
+        var person = {
+            nom:'smith',
+            prenom:'john',
+            age:34,
+            addresse:{num:10,rue:"aevnue Banana","Ville":"Paris"},
+            getProperties:function(){
+                return this.nom +': '+this.prenom + ': '+this.age+ ' : '
+                + 'adre : '+ this.addresse.num + ' '+ this.addresse.rue +' '+ this.addresse.Ville; 
+            }
+        };
+
+        function afficherProprietesObjet(){
+            var AffichageElement = document.getElementById("affichage");
+            AffichageElement.innerHTML = person.getProperties();
+            document.getElementById("cacherBtn").style.display = "block";
+        }
+
+        function cacherResultat() {
+            document.getElementById("affichage").innerHTML = "";
+            document.getElementById("cacherBtn").style.display = "none";
+        }
+    </script>
+
+    <!-- Add Bootstrap's JavaScript file (this must be included after the jQuery library) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
