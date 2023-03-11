@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Add the Tailwind CSS stylesheet -->
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css" rel="stylesheet">
+  <title>Document</title>
+  <script src="code.js"></script>
+</head>
+
+<body class="bg-gray-200">
+  <div class="container mx-auto">
+    <form action="" method="get">
+      <table class="table-auto mt-10">
+        <tbody>
+          <tr>
+            <td class="px-4 py-2">Nom</td>
+            <td class="px-4 py-2"><input type="text" id="nom" class="w-full border rounded px-3 py-2"></td>
+          </tr>
+          <tr>
+            <td class="px-4 py-2">Quantité</td>
+            <td class="px-4 py-2"><input type="text" id="quantite" class="w-full border rounded px-3 py-2"></td>
+          </tr>
+          <tr>
+            <td class="px-4 py-2">Prix</td>
+            <td class="px-4 py-2"><input type="text" id="prix" class="w-full border rounded px-3 py-2"></td>
+          </tr>
+          <tr>
+            <td class="px-4 py-2"><input type="button" value="Affecter et calculer" onclick="calculer()" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"></td>
+            <td class="px-4 py-2"><input type="text" id="resultat" class="w-full border rounded px-3 py-2"></td>
+          </tr>
+        </tbody>
+      </table>
+    </form>
+  </div>
+</body>
+
+</html>
